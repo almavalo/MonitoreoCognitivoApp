@@ -1,0 +1,4 @@
+export {default as Home} from './Home'
+export {default as PantallaInicio} from './PantallaInicio'
+export {default as Test} from './Test'
+export {default as TestQuestions} from './TestQuestions'
