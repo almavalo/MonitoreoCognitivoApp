@@ -17,6 +17,14 @@ const Test = () => {
   const [valueComp, setValueComp] = useState('');
   const [valueCorr, setValueCorr] = useState('');
   const [valuePlan, setValuePlan] = useState('');
+  const [disabled, setDisable] = useState(true);
+
+  const disabledBtn = (text) => {
+    setValuePlan(text)
+    if(valueAuto.length > 0 && valueComp.length > 0 && valueCorr.length > 0 && valuePlan.length > 0) setDisable(false)
+    else setDisable(true)  
+  }
+
   return (
     <ImageBackground
       source={require('../assets/Fondo.png')}
@@ -65,16 +73,17 @@ const Test = () => {
                 editable
                 multiline
                 numberOfLines={4}
-                onChangeText={text => setValuePlan(text)}
+                onChangeText={text => disabledBtn(text)}
                 value={valuePlan}
                 style={styles.textInput}
               />
             </View>
             <View style={{alignItems: 'center', marginBottom: 20}}>
               <TouchableOpacity
+              disabled={disabled}
                 onPress={() => navigation.navigate('TestQuestions')}
                 style={[
-                  styles.styleBtn,
+                  disabled ? styles.styleBtnDisabled : styles.styleBtn,
                   {justifyContent: 'center', alignItems: 'center'},
                 ]}>
                 <Text style={styles.styleTextBtn}>Siguiente</Text>
