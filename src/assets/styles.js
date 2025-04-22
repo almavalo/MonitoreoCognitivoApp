@@ -34,6 +34,18 @@ const styles = {
     borderWidth: 2,
     borderColor: '#fff',
   },
+  styleBtnDisabled: {
+    width: '50%',
+    marginTop: 10,
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    backgroundColor: '#d3d3d3',
+    borderRadius: 50,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: 2,
+    borderColor: '#fff',
+  },
   textGeneral:{
     fontSize: 18, fontWeight: 'bold', color: '#2E56A2', textAlign: 'center', marginTop: 20
   },
