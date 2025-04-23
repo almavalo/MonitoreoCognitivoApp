@@ -1,6 +1,6 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { Home, PantallaInicio, Test, TestQuestions, } from '../views'
+import { Home, PantallaInicio, Perfil, Test, TestQuestions, } from '../views'
 import { Questions } from '../components';
 
 const Stack = createNativeStackNavigator();
@@ -13,6 +13,7 @@ function MainStack() {
       <Stack.Screen name="Test" component={Test} />
       <Stack.Screen name="TestQuestions" component={TestQuestions} />
       <Stack.Screen name="Questions" component={Questions} />
+      <Stack.Screen name="Perfil" component={Perfil} />
     </Stack.Navigator>
   );
 }

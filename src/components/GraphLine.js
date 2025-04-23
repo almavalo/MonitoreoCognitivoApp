@@ -10,8 +10,8 @@ const GraphLine = ({dataTest}) => {
       {!dataTest.labels.length || !dataTest.datasets[0].data.length ? (
         <Loading />
       ) : (
-        <>
-          <Text style={styles.textGeneralWhite}>PROGRESO</Text>
+        <View style={{marginTop:10}}>
+          <Text style={styles.styleTextBtnIni}>Progresos del Test:</Text>
           <LineChart
             data={dataTest}
             width={320}
@@ -39,7 +39,7 @@ const GraphLine = ({dataTest}) => {
               borderColor: '#2E56A2',
             }}
           />
-        </>
+        </View>
       )}
     </>
   );

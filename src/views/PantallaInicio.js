@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import styles from '../assets/styles';
 import {useNavigation} from '@react-navigation/native';
 import GraphLine from '../components/GraphLine';
-import { Card, GraphProgress } from '../components';
+import { Card, GraphProgress, Menu } from '../components';
 
 const Inicio = () => {
   const navigation = useNavigation();
@@ -19,6 +19,7 @@ const Inicio = () => {
     labels: [],
     data: []
   });
+  const [dataResult, setDataResult] = useState({});
 
   const apiTest = () => {
     fetch('https://jsonplaceholder.typicode.com/todos/1')
@@ -50,36 +51,60 @@ const Inicio = () => {
       })
   }
 
+  const apiResult = () => {
+    fetch('https://jsonplaceholder.typicode.com/todos/1')
+      .then(response => response.json())
+      .then(function (response) {
+        if(response){
+          setDataResult({
+            mes: 'Abril',
+            puntos: '99',
+            objetivo: 'Completado'
+          });
+        }
+      })
+  }
+
   useEffect(() => {
     apiTest(),
-    apiGame()
+    apiGame(),
+    apiResult()
   }, [])
   
 
   return (
-    <View style={styles.container}>
-      <ScrollView>
-        <GraphLine dataTest={dataTest} />
-        <GraphProgress dataGame={dataGame} />
-        <Card />
-        <TouchableOpacity
-          onPress={() => navigation.navigate('Test')}
-          style={styles.styleBtn}>
-          <Text style={styles.styleTextBtn}>Iniciar Test</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => navigation.navigate('Resultados')}
-          style={styles.styleBtn}>
-          <Text style={styles.styleTextBtn}>Perfil</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => navigation.navigate('Resultados')}
-          style={styles.styleBtn}>
-          <Text style={styles.styleTextBtn}>Juegos</Text>
-        </TouchableOpacity>
-      </ScrollView>
-    </View>
+    <>
+      <View style={styles.container}>
+        <ScrollView>
+          <Card dataResult={dataResult} />
+          <GraphLine dataTest={dataTest} />
+          <View style={styles.containerCardIni}>
+            <Text style={styles.styleTextBtnIni}>
+              Comienza el Test Cognitivo
+            </Text>
+            <TouchableOpacity
+              onPress={() => navigation.navigate('Test')}
+              style={styles.styleBtnIni}>
+              <Text style={styles.styleTextBtn}>Iniciar Test</Text>
+            </TouchableOpacity>
+          </View>
+          <GraphProgress dataGame={dataGame} />
+          <View style={styles.containerCardIni}>
+            <Text style={styles.styleTextBtnIni}>
+              Entrena tu mente jugando
+            </Text>
+            <TouchableOpacity
+              onPress={() => navigation.navigate('Test')}
+              style={styles.styleBtnIni}>
+              <Text style={styles.styleTextBtn}>Juega</Text>
+            </TouchableOpacity>
+          </View>
+        </ScrollView>
+      </View>
+      <Menu />
+    </>
   );
 }
 
 export default Inicio
+
