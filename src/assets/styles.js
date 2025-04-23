@@ -15,7 +15,7 @@ const styles = {
   styleImg: {
     height: '150',
     width: '100%',
-    marginBottom: 20
+    marginBottom: 20,
   },
   styleTextBtn: {
     fontSize: 14,
@@ -46,18 +46,26 @@ const styles = {
     borderWidth: 2,
     borderColor: '#fff',
   },
-  textGeneral:{
-    fontSize: 18, fontWeight: 'bold', color: '#2E56A2', textAlign: 'center', marginTop: 20
+  textGeneral: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#2E56A2',
+    textAlign: 'center',
+    marginTop: 20,
   },
-  textGeneralWhite:{
-    fontSize: 16, fontWeight: 'bold', color: '#fff', textAlign: 'flex-start', marginTop: 20
+  textGeneralWhite: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#fff',
+    textAlign: 'flex-start',
+    marginTop: 20,
   },
   textInput: {
-    height: 80, 
+    height: 80,
     borderColor: '#2E56A2',
-    borderWidth: 2, 
-    padding: 10, 
-    backgroundColor: 'white', 
+    borderWidth: 2,
+    padding: 10,
+    backgroundColor: 'white',
     margin: 10,
   },
   // ESTILOS DEL HEADER
@@ -80,8 +88,32 @@ const styles = {
     height: '300',
     width: '100%',
     marginTop: 50,
-    marginBottom: 50
-  }
+    marginBottom: 50,
+  },
+  //CARD
+  containerCard: {
+    backgroundColor: '#fff',
+    width: '100%',
+    height: 'auto',
+    borderRadius: 16,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 15,
+  },
+  sectionCard: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    flex: 0.33,
+  },
+  titleCard: {
+    color: '#000',
+    fontSize: 13,
+  },
+  valCard: {
+    color: '#000',
+    fontSize: 16,
+  },
 };
 
 export default styles;
