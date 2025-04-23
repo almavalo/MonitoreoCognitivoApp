@@ -7,4 +7,6 @@ export {default as Questions} from './Questions'
 export {default as LineChart} from './GraphLine'
 export {default as GraphProgress} from './GraphProgress'
 export {default as Card} from './Card'
+export {default as Menu} from './Menu'
+export {default as CardPerfil} from './CardPerfil'
 

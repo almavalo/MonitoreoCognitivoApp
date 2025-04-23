@@ -10,8 +10,8 @@ const GraphProgress = ({dataGame}) => {
       {!dataGame.labels.length || !dataGame.data.length ? (
         <Loading />
       ) : (
-        <>
-          <Text style={styles.textGeneralWhite}>GraphProgress</Text>
+        <View style={{marginTop:10}}>
+          <Text style={styles.styleTextBtnIni}>Progresos del Juego:</Text>
           <ProgressChart
             data={dataGame}
             width={320}
@@ -36,7 +36,7 @@ const GraphProgress = ({dataGame}) => {
               borderColor: '#2E56A2',
             }}
           />
-        </>
+        </View>
       )}
     </>
   );

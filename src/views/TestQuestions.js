@@ -1,4 +1,4 @@
-import { View, Text, ImageBackground } from 'react-native'
+import { View, Text, ImageBackground, Alert } from 'react-native'
 import React, { useState } from 'react'
 import { Header, Questions } from '../components';
 import { useNavigation } from '@react-navigation/native';
@@ -8,7 +8,10 @@ const TestQuestions = () => {
   const [response, setResponse] = useState('primero')
   const handleResponse = (res) => {
     setResponse(res)
-    if(res === 's3' || res === 'n3') navigation.navigate('Home')
+    if(res === 's3' || res === 'n3') {
+      Alert.alert("Completaste el test con éxito.", "Puede ver su progreso en la pantalla principal")
+      navigation.navigate('Home')
+    }
   };
   return (
     <ImageBackground source={require('../assets/Fondo.png')} style={{flex: 1}}>

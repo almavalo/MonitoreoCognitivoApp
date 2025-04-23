@@ -2,9 +2,10 @@ const styles = {
   container: {
     height: 'auto',
     alignSelf: 'stretch',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     alignItems: 'center',
-    paddingHorizontal: 20,
+    padding: 20,
+    flex: 1,
   },
   containerForm: {
     height: 'auto',
@@ -28,7 +29,7 @@ const styles = {
     paddingVertical: 10,
     paddingHorizontal: 20,
     backgroundColor: '#2E56A2',
-    borderRadius: 50,
+    borderRadius: 16,
     justifyContent: 'center',
     alignItems: 'center',
     borderWidth: 2,
@@ -114,6 +115,51 @@ const styles = {
     color: '#000',
     fontSize: 16,
   },
+  //card en la pantalla de inicio
+  containerCardIni: {
+    backgroundColor: '#fff',
+    width: '100%',
+    height: '90',
+    borderRadius: 16,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 15,
+  },
+  styleTextBtnIni: {
+    color: '#2E56A2',
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+  styleBtnIni: {
+    width: '100%',
+    marginTop: 10,
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    backgroundColor: '#2E56A2',
+    borderRadius: 16,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: 2,
+    borderColor: '#fff',
+  },
+  //card perfil
+  containerPerfil: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 20,
+  },
+  containerCardPerfil: {
+    backgroundColor: '#fff',
+    width: '100%',
+    height: '150',
+    borderRadius: 16,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 15,
+    flexDirection: 'row'
+  },
+
 };
 
 export default styles;
