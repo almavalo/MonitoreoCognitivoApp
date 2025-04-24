@@ -55,7 +55,7 @@ const Test = () => {
                 style={styles.textInput}
               />
               <Text style={styles.textGeneralWhite}>
-                Corrección de errores::
+                Corrección de errores:
               </Text>
               <TextInput
                 editable
