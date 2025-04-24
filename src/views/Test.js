@@ -7,9 +7,9 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import React, {useState} from 'react';
-import {Header} from '../components';
 import styles from '../assets/styles';
 import {useNavigation} from '@react-navigation/native';
+import { Menu } from '../components';
 
 const Test = () => {
   const navigation = useNavigation();
@@ -30,7 +30,6 @@ const Test = () => {
       source={require('../assets/Fondo.png')}
       style={{flex: 1}}>
       <View style={{flex: 1, justifyContent: 'space-between'}}>
-        <Header titulo={'TEST COGNITIVO'} />
         <View style={{flex: 1}}>
           <ScrollView>
             <View style={styles.containerForm}>
@@ -92,6 +91,7 @@ const Test = () => {
           </ScrollView>
         </View>
       </View>
+      <Menu />
     </ImageBackground>
   );
 };

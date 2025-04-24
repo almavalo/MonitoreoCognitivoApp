@@ -1,6 +1,6 @@
 import { View, Text, ImageBackground, Alert } from 'react-native'
 import React, { useState } from 'react'
-import { Header, Questions } from '../components';
+import { Menu, Questions } from '../components';
 import { useNavigation } from '@react-navigation/native';
 
 const TestQuestions = () => {
@@ -16,7 +16,6 @@ const TestQuestions = () => {
   return (
     <ImageBackground source={require('../assets/Fondo.png')} style={{flex: 1}}>
       <View style={{flex: 1, justifyContent: 'space-between'}}>
-        <Header titulo={'TEST COGNITIVO'} />
         <View style={{flex: 1}}>
           {response == 'primero' ? (
             <Questions
@@ -41,6 +40,7 @@ const TestQuestions = () => {
           )}
         </View>
       </View>
+      <Menu />
     </ImageBackground>
   );
 }

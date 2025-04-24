@@ -50,7 +50,7 @@ const Perfil = () => {
           <Card dataResult={dataResult} />
         </View>
         <View style={[styles.containerCardIni, {marginVertical: 10}]}>
-          <Text style={styles.styleTextBtnIni}>Actualiza tu datos</Text>
+          <Text style={styles.styleTextBtnIni}>Actualiza tus datos</Text>
           <TouchableOpacity
             onPress={() => Alert.alert("Monitoreo Cognitivo","Tus datos han sido actualizados correctamente.")}
             style={styles.styleBtnIni}>

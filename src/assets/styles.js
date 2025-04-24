@@ -69,21 +69,6 @@ const styles = {
     backgroundColor: 'white',
     margin: 10,
   },
-  // ESTILOS DEL HEADER
-  headerContainer: {
-    height: 60,
-    width: '100%',
-    flexDirection: 'row',
-    backgroundColor: '#2E56A2',
-    alignItems: 'center',
-  },
-  headerText: {
-    fontSize: 20,
-    color: '#fff',
-    fontWeight: 'bold',
-    flex: 1,
-    textAlign: 'center',
-  },
   //COMPONENTE QUESTIONS
   styleImgQuestions: {
     height: '300',
