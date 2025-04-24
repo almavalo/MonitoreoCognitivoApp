@@ -8,7 +8,9 @@ const Card = ({dataResult}) => {
   return (
     <>
       {!dataResult ? (
-        <Loading />
+        <View style={styles.loadingCenter}>
+          <Loading />
+        </View>
       ) : (
         <>
           <Text style={styles.styleTextBtnIni}>Tús Logros:</Text>
