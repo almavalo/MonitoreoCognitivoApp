@@ -69,6 +69,9 @@ const styles = {
     backgroundColor: 'white',
     margin: 10,
   },
+  loadingCenter:{
+    justifyContent: 'center', alignItems: 'center', padding: 20
+  },
   //COMPONENTE QUESTIONS
   styleImgQuestions: {
     height: '300',
@@ -142,9 +145,47 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     padding: 15,
-    flexDirection: 'row'
+    flexDirection: 'row',
   },
-
+  //JUEGO
+  textPrincipal: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#fff',
+    textAlign: 'flex-start',
+    marginTop: 20,
+  },
+  textGeneralJuego: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#fff',
+    textAlign: 'center',
+    marginTop: 20,
+  },
+  styleBtnJuego: {
+    width: '50%',
+    marginTop: 10,
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    backgroundColor: '#2E56A2',
+    borderRadius: 16,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: 2,
+    borderColor: '#fff',
+  },
+  styleImgFigura:{
+    height: '250',
+    width: '250',
+  },
+  textInputJuego:{
+    height: 40,
+    borderColor: '#2E56A2',
+    borderWidth: 2,
+    padding: 10,
+    backgroundColor: 'white',
+    margin: 10,
+  }
 };
 
 export default styles;

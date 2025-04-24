@@ -3,11 +3,19 @@ import React, { useEffect, useState } from 'react'
 import styles from '../assets/styles';
 import {useNavigation} from '@react-navigation/native';
 import GraphLine from '../components/GraphLine';
-import { Card, GraphProgress, Menu } from '../components';
+import { Card, GraphBar, GraphProgress, Menu } from '../components';
 
 const Inicio = () => {
   const navigation = useNavigation();
   const [dataTest, setDataTest] = useState({
+    labels: [],
+    datasets: [
+      {
+        data: [],
+      },
+    ],
+  });
+  const [dataDay, setDataDay] = useState({
     labels: [],
     datasets: [
       {
@@ -51,6 +59,23 @@ const Inicio = () => {
       })
   }
 
+  const apiDay = () => {
+    fetch('https://jsonplaceholder.typicode.com/todos/1')
+      .then(response => response.json())
+      .then(function (response) {
+        if(response){
+          setDataDay({
+            labels: ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes"],
+            datasets: [
+              {
+                data: [50, 10, 77, 30, 99]
+              }
+            ]
+          });
+        }
+      })
+  }
+
   const apiResult = () => {
     fetch('https://jsonplaceholder.typicode.com/todos/1')
       .then(response => response.json())
@@ -68,6 +93,7 @@ const Inicio = () => {
   useEffect(() => {
     apiTest(),
     apiGame(),
+    apiDay(),
     apiResult()
   }, [])
   
@@ -77,6 +103,7 @@ const Inicio = () => {
       <View style={styles.container}>
         <ScrollView>
           <Card dataResult={dataResult} />
+          <GraphBar dataDay={dataDay} />
           <GraphLine dataTest={dataTest} />
           <View style={styles.containerCardIni}>
             <Text style={styles.styleTextBtnIni}>
@@ -94,7 +121,7 @@ const Inicio = () => {
               Entrena tu mente jugando
             </Text>
             <TouchableOpacity
-              onPress={() => navigation.navigate('Test')}
+              onPress={() => navigation.navigate('Juego')}
               style={styles.styleBtnIni}>
               <Text style={styles.styleTextBtn}>Juega</Text>
             </TouchableOpacity>

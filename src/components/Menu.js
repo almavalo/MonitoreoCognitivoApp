@@ -57,7 +57,7 @@ const Menu = () => {
           alignItems: 'center',
           flex: 0.25,
         }}>
-        <TouchableOpacity onPress={() => navigation.navigate('Test')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Juego')}>
           <Material
             name={'puzzle'}
             size={25}

@@ -8,7 +8,9 @@ const GraphLine = ({dataTest}) => {
   return (
     <>
       {!dataTest.labels.length || !dataTest.datasets[0].data.length ? (
-        <Loading />
+        <View style={styles.loadingCenter}>
+          <Loading />
+        </View>
       ) : (
         <View style={{marginTop:10}}>
           <Text style={styles.styleTextBtnIni}>Progresos del Test:</Text>
