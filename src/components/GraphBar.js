@@ -14,7 +14,7 @@ const GraphBar = ({dataDay}) => {
         </View>
       ) : (
         <View style={{marginTop: 10}}>
-          <Text style={styles.styleTextBtnIni}>Progresos diario:</Text>
+          <Text style={styles.styleTextBtnIni}>Progreso diario:</Text>
           <BarChart
             style={{
               borderRadius: 16,
